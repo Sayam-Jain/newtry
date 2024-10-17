@@ -15,7 +15,7 @@ const server = http.createServer(app);
 
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000", 
+    origin: "https://newtry-1cxvitx96-sayam-jains-projects.vercel.app", 
     methods: ["GET", "POST"], 
     allowedHeaders: ["Content-Type"], 
     credentials: true 
@@ -24,7 +24,7 @@ const io = socketIo(server, {
 
 // middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "https://newtry-1cxvitx96-sayam-jains-projects.vercel.app", credentials: true }));
 app.use(cookieParser());
 app.use('/auth', authRoutes);
 app.use('/scrape', scrapeRoutes);
